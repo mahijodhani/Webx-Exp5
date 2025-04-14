@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Interests{% endblock %}
+
+{% block content %}
+<h2>My Interests</h2>
+<form method="POST">
+    <label for="interests">Type your interests:</label>
+    <input type="text" name="interests" required>
+    <button type="submit">Submit</button>
+</form>
+
+{% if interests %}
+<p><strong>You entered:</strong> {{ interests }}</p>
+{% endif %}
+{% endblock %}
